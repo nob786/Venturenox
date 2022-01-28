@@ -1,0 +1,33 @@
+Tasks of a DevOps Engineer
+
+1) I must know how developers work
+2) Which Git Workflow we use.
+3) How applications is configured to talk to services.
+4) Automated testing
+5) Prepare infrastructure
+6) Knowledge of linux
+7) Linux file system
+8) Server Management
+9) Ssh into server
+------------------------------------------------------
+Security
+ 
+1) Configure Firewall, Proxy Server
+2) Opening Ports Load Balancers
+3) Http/Https
+4) IP, DNS work
+5) My job is to understand the jobs of Sys Admins, Network admins and Security Admins to the extent where i am able to deploy the application to the server.
+-------------------------------------------------------
+1) I must know the technology of virtualization and containerization.
+2) Docker
+3) Helm
+4) Terraform
+5) CI/CD
+6) Monitoring
+-------------------------------------------------------------
+How do we realease the application version to end users with an efficient, fast and automated way. Thats where main tasks of DevOps comes in.
+
+Configure the complete CI/CD pipeline.
+
+Must know terraform and kubernetes.
+Must know Scripting language
