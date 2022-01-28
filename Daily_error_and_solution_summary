@@ -1,0 +1,64 @@
+25/01/2022 (Tuesday)
+--------------------
+What problems were encountered?
+-------------------------------
+1) Server error 307 was being encountered which meant that there was a redirection while hitting the API. This problem was not being encountered in local development but in container.
+
+Sol:
+There was an extra forward slash "/" in the api address due to which redirection was being done. Thus, it was solved by manipulating that "/" by Omer Bhai. 
+
+
+2) There was an issue of node pool versioning in production. Our node pool version was being updated due to automatic update which led to the command "react build" not to work.
+
+Sol:
+Faizan bhai solved it via terraform resource versioning. (Have to check on that problem for self learning).
+
+
+3) I encountered a problem while running docker-compose up for crewnetics due to a depricated command "python". Following was the error:
+"python package not found"
+NOTE:
+"Faizi bhai said: RD kafka depricate ho gaya hua hai for python 2 so we used python3 today."
+
+Sol:
+I changed the command from python to python to python3 in the Dockerfile.
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+26/01/2022 (Wednesday)
+----------------------
+
+Todays Tasks:
+-------------
+1) Install all softwares told by Faizi Bhai. (Done)
+2) Study Crewnetics and altrunic directory and pipelines. (Done but must be revised)
+3) Explore what is NAT. (Passed)
+4) Solve any problems sent to you. (Did not encounter any problem today)
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+27/01/2022 (Thursday)
+---------------------
+
+Today Tasks:
+------------
+1) Get Credentials for crewnetics (Done)
+2) Re-study crewnetics pipeline. (Done but have to discuss some stuff with Ali bhai.)
+3) Explore what are runners. (Done but some discussion is to be made with Ali bhai.)
+4) Study confluent cloud. (Passed)
+5) Get added to lastpass. (Was not added. Try again tomorrow)
+6) Solve any problems sent to you. (Did not encounter any problem today)
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+28/01/2022 (Friday)
+-------------------
+1) Discuss architecture of crewnetics with Ammar Bhai.
+2) Discuss pipeline and runners with Ali Bhai.
+3) Learn about kafka and confluent cloud.
+4) Study NAT/Eagress
+5) Study Ingress and load balancing in depth.
+6) Solve any problems sent to you. ()
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+

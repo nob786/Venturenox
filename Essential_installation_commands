@@ -1,0 +1,106 @@
+Google:
+-------
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+Drone:
+------
+sudo apt install curl
+
+curl -L https://github.com/drone/drone-cli/releases/latest/download/drone_linux_amd64.tar.gz | tar zx
+
+sudo install -t /usr/local/bin drone
+
+
+KUBECTL
+-------
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+
+echo "$(<kubectl.sha256) kubectl" | sha256sum --check
+
+Docker
+------
+sudo apt-get update
+
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+Docker-compose:
+---------------
+sudo apt install docker-compose
+
+Terraform:
+----------
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+sudo apt-get update && sudo apt-get install terraform
+
+
+Using docker without sudo:
+--------------------------
+sudo groupadd docker
+
+sudo gpasswd -a $USER docker
+newgrp docker
+
+Python:
+-------
+
+sudo apt install python3-pip
+
+sudo pip3 install virtualenv
+
+Slack:
+------
+sudo apt update
+
+sudo apt install snapd
+
+sudo snap install slack --classic
+
+Gcloud:
+-------
+https://cloud.google.com/sdk/docs/install#deb
+                    
+Helm:
+-----
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+
+$ chmod 700 get_helm.sh
+
+$ ./get_helm.sh
+
+CCLOUD:
+-------
+sudo curl -L --http1.1 https://cnfl.io/ccloud-cli | sh -s -- -b ~/Downloads/
+
+sudo mv ~/Downloads/ccloud /usr/local/bin/
+
+AWS CLI:
+--------
+sudo apt install awscli
+
+Postman:
+--------
+sudo snap install postman
